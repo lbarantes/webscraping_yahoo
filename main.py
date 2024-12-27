@@ -1,6 +1,10 @@
+import os
 import utils.scraper as scraper
 import utils.analizer as analizer
 import utils.report as report
+
+if not os.path.exists("assets"):
+    os.makedirs("assets", exist_ok=True)
 
 enterprise = input("Digite a sigla da ação de uma empresa (ex. AAPL): ")
 
